@@ -19,10 +19,14 @@ class Dog(Animal):
     def __init__(self, name, age, breed):
         pass
 
+
+
     def speak(self):
+        Animal.speak = f"{name} says Woof."
         pass
 
     def move(self):
+        Animal.move = f"{name} runs 200 mi."
         pass
 
 
