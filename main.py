@@ -1,9 +1,9 @@
 from animals import Animal, Dog, Bird, Fish, Cat
 
-my_dog = Dog("jeffrey", "67", "Woof!", "lab")
-my_bird = Bird("john", "117", "Tweet", True)
-my_fish = Fish("bubbles", "3", "fresh")
-my_cat = Cat("brighton", "44", "Meow", False)
+my_dog = Dog("jeffrey", "67", "Woof")
+my_bird = Bird("john", "117", "Tweet")
+my_fish = Fish("bubbles", "3", "nothing")
+my_cat = Cat("brighton", "44", "Meow")
 animals = [my_dog, my_bird, my_fish, my_cat]
 
 def main():
@@ -18,11 +18,8 @@ def main():
 
     # Loop over all animals and call speak(), move(), and describe()
     for animal in animals:
-        Dog.speak()
-        Bird.speak()
-        Fish.speak()
-        Cat.speak()
-        
+        Animal.speak(animal)
+        Animal.move(animal)
 
 if __name__ == "__main__":
     main()

@@ -11,33 +11,31 @@ class Animal:
         print(f"{self.name} moves around. ")
 
     def describe(self):
-        print(f"{self.name} is a {self.age} years old {self.__class__name__}.")
+        print(f"{self.name} is a {self.age} years old {self.class_name}.")
 
 
 class Dog(Animal):
-    def init(self, name, age, sound, breed):
-        super.init(name, age)
-        self.sound = sound
+    def init(self, name, age, breed):
+        super.init(name, age, "Woof")
         self.breed = breed
 
 
 
 class Bird(Animal):
-    def init(self, name, age, water):
-        super.init(name, age)
-        self.water = water
+    def init(self, name, age, fly):
+        super.init(name, age, "Tweet")
+        self.fly = fly
 
     
 
 
 class Fish(Animal):
-    def init(self, name, age, sound):
+    def init(self, name, age, water):
         super.init(name, age)
-        self.sound = sound
+        self.water = water
 
 
 class Cat(Animal):
-    def init(self, name, age, sound, indoor):
-        super.init(name, age)
-        self.sound = sound
+    def init(self, name, age, indoor):
+        super.init(name, age, "Meow")
         self.indoor = indoor
